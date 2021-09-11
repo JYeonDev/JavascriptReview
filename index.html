@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>
+  /* 
+    this : 나를 포함하고 있는 오브젝트
+   */
+
+  console.log(this)
+
+  let object =  {
+    data : {
+        fc() {
+        console.log(this)
+      }
+    }
+  }
+
+  object.data.fc()
+
+
+  function machine() {
+    this.name = 'Kim'
+    // 여기서 this는 새로 생성되는 오브젝트를 의미한다.  * 인스턴스라고 한다.
+  }
+
+  let object2 = new machine();
+
+
+  // 이벤트 리스너 안에서 this는 e.currentTarget 과 같다. e.currentTarget 은 현재 이벤트가 동작하는 곳을 나타낸다.
+
+</script>
